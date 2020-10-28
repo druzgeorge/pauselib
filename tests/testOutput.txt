@@ -1,0 +1,17 @@
+Successfully run None on 2020-10-28 16:26:33.691422!
+Successfully run None on 2020-10-28 16:26:54.036447!
+Successfully run None on 2020-10-28 16:28:35.811084!
+Successfully run None on 2020-10-28 16:30:17.560945!
+Failed run None on 2020-10-28 16:30:17.560945
+Error=> exec() arg 1 must be a string, bytes or code object
+Failed run None on 2020-10-28 16:31:09.165289
+Error=> exec() globals must be a dict, not str
+Successfully run None on 2020-10-28 16:34:04.000399!
+Successfully run None on 2020-10-28 16:35:16.802889!
+Successfully run None on 2020-10-28 16:35:34.642538!
+Successfully run None on 2020-10-28 16:36:19.410795!
+Successfully run None on 2020-10-28 16:36:43.364165!
+Successfully run None on 2020-10-28 16:38:24.447944!
+Successfully run None on 2020-10-28 18:15:57.129878!
+Successfully run None on 2020-10-28 18:16:22.410612!
+Successfully run None on 2020-10-28 18:34:04.431256!

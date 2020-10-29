@@ -3,7 +3,7 @@
 #imports
 from time import sleep
 import exceptions
-import threading
+from core import BasicFunctions
 
 class pause:
     def __init__(self):
@@ -33,7 +33,7 @@ class pause:
     #what you do with it is completely up to you!
     #this can be used to request user input for a specified number of seconds(converted to other units)
     @staticmethod
-    def for_input(time, msg="Paused for input: ", command=None):
+    def for_input(time, msg="Paused for input: ", command=False, SILENT=False):
         if not time:
             raise Exception(exceptions.exceptions.mutual_time_omission_error(msg))
         if not msg:
@@ -42,13 +42,10 @@ class pause:
             raise TypeError("Time must be integer!")
         if not type(msg) is str:
             raise TypeError("msg Must be str()")
-        timedout = False
-        class inputThreading(threading.Thread):
-            def initiate(self):
-                self.timedout = False
-                self.usr_input = " "
-            #todo: implement timer
-            #todo:implrtment timer thread
-            #todo: implemet detect_user_input
-            @staticmethod
-            detect_user_input()
+        if command == False:
+            usr_input = BasicFunctions.detetct_user_input(time, msg, SILENT)
+            return usr_input
+        command_input = BasicFunctions.detetct_user_input_with_commnad(time, msg, SILENT)
+        exec(command_input)
+
+

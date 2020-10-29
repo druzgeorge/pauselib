@@ -13,15 +13,10 @@ class exceptions:
         print(f"Did you mean to type pause.pause_with_msg(time=10, Msg={msg})?")
         sys.exit(1)
 
-def receive_input(time, msg="Paused", command=None):
-     print("{:s}\r".format(" "), end="", flush=True)
-     print("{:s}".format(msg), end=" ")
-     sleep(time)
-     t = 0
-     inpt  = str()
-     if command == None:
-             while t < time:
-                     sleep(1)
-                     t += 1
-                     inpt = str(input("Hi"))
-
+    @staticmethod
+    def TimedoutError(SILENT=False):
+        if SILENT == False:
+            print("\nThe input process timedout!")
+            print("\nTo suppress this error in the future, set SILENT=True")
+        else:
+            pass

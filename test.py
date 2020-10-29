@@ -23,3 +23,7 @@ def success(function, **kwargs):
 # success(pause.with_msg, None, "hello") -- returns nonetype error!
 # success(pause.with_msg, Msg="hello", time=1)
 # success(pause.with_msg,  time=1, Msg="hello")
+# success(pause.for_input, time=5)
+success(pause.for_input, time=10, command=True)
+# contents = pause.for_input(5, SILENT=True)
+# print(contents)
